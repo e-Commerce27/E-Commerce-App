@@ -1,0 +1,55 @@
+﻿@model IEnumerable<E_Commerce_App.Models.Category>
+<head>
+    <style>
+        table
+        {
+            width:100%;
+            height:100%;
+            margin:50px;
+            border:2px solid black;
+           
+        }
+        tr,td
+        {
+            border: 2px solid black;
+            padding :2px;
+            color:gray;
+        }
+
+
+    </style>
+</head>
+<table >
+    <tr>
+        <td style="color:brown">
+           Name
+        </td>
+        <td style="color:brown">
+          Type
+        </td>
+        <td style="color:brown">
+           Amount
+        </td>
+
+
+    </tr>
+    
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+           
+
+        </tr>
+    }
+
+</table>
